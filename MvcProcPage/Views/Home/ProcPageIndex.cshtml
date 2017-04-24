@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<link href="~/Scripts/pagination.css" rel="stylesheet" />
+<div class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>真实姓名</th>
+                <th>出生日期</th>
+                <th>地址</th>
+            </tr>
+        </thead>
+        <tbody id="tbodylist"></tbody>
+
+    </table>
+
+</div>
+<div id="Pagination" class="pagination">
+
+</div>
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/jquery.pagination.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script type="text/javascript">
+    //分页查询开始
+    $(document).ready(function () {
+        getDataList(0, null);
+    });
+
+    var pagesize = 10;
+    var page = 1;
+    var initFlag = true;
+
+    function getDataList(currPage, jg) {
+
+        $.ajax({
+            url: "/Home/GetProList",
+            type: "get",
+            dataType: 'json',
+            data: { pagesize: pagesize, page: currPage + 1 },
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (response) {            
+                if (response.user != null && response.user != "" && response.TotalCount != undefined && response.TotalCount > 0) {
+                    if (initFlag) {
+                        $("#Pagination").pagination(
+                                response.TotalCount,
+                                {
+                                    items_per_page: pagesize,
+                                    num_edge_entries: 1,
+                                    num_display_entries: 8,
+                                    callback: getDataList//回调函数
+                                });
+                        initFlag = false;
+                    }
+                    $("#tbodylist").html("");
+                    loadDataList(response.user);
+                } else {
+                 
+                }
+
+            }
+        });
+    }
+
+    function loadDataList(listdata) {    
+        var tbody = "";
+        $(listdata).each(function (i, n) { 
+            //表格
+            tbody += "<tr>" +
+                            "<td>" + n.UserName + "</td>" +
+                            "<td>" + n.TrueName + "</td>" +
+                            "<td>" + formatDate(n.Birthday) + "</td>" +
+                            "<td>" + n.LocalAddress + "</td>" +
+                       "</tr>";          
+        });
+    
+        $("#tbodylist").html(tbody);
+
+    }
+    //格式日期
+    function formatDate(NewDtime) 
+    {
+        var dt = new Date(parseInt(NewDtime.slice(6, 19)));
+        var year = dt.getFullYear();
+        var month = dt.getMonth() + 1;
+        var date = dt.getDate();
+        var hour = dt.getHours();
+        var minute = dt.getMinutes();
+        var second = dt.getSeconds();
+        return year + "-" + month + "-" + date ;
+    }
+</script>

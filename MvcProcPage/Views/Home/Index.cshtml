@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;    
+}
+@using PagedList.Mvc;
+@using MvcProcPage.Models;
+@model PagedList.IPagedList<UserInfo>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<div class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>真实姓名</th>              
+                <th>出生日期</th>
+                <th>地址</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.UserName </td>
+                        <td>@item.TrueName </td>
+                        <td>@item.Birthday </td>
+                        <td>@item.LocalAddress </td>
+                    </tr>
+
+                }
+
+            }
+        </tbody>
+
+    </table>
+
+</div>
+<div class="pagination">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</div>
+<script src="~/Scripts/bootstrap.js"></script>
