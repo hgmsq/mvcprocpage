@@ -16,8 +16,7 @@ namespace MvcProcPage.Controllers
         IUserService service = new UserService();
         // GET: Home
         public ActionResult Index(int page=1)
-        {
-            
+        {      
             #region 插入10条数据
 
             //for (int i = 1; i <= 100000; i++)
@@ -48,6 +47,13 @@ namespace MvcProcPage.Controllers
         {
             var model = service.GetPageByProcList(page, pagesize);
             return Json(model, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult TestLog()
+        {
+            int result = 0;
+            int x = 1, y = 0;
+            result = x / y;
+            return View();
         }
     }
 }
