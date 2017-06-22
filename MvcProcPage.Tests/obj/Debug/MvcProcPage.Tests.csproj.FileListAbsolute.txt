@@ -61,8 +61,8 @@ E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\MvcProcPage.Tests.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\MvcProcPage.Tests.pdb
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\MvcProcPage.dll
-E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\log4net.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\System.Web.Mvc.dll
+E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\log4net.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\Dapper.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\PagedList.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\DapperExtensions.dll
@@ -72,8 +72,8 @@ E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\System.Web.WebPages.d
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\MvcProcPage.pdb
-E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\log4net.xml
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\System.Web.Mvc.xml
+E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\log4net.xml
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\Dapper.xml
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\PagedList.xml
 E:\Git\mvcprocpage\mvcprocpage\MvcProcPage.Tests\bin\Debug\DapperExtensions.pdb

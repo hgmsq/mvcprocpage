@@ -1,0 +1,58 @@
+﻿<log4net>
+  <!-- Print only messages of level DEBUG or above in the packages -->
+  <logger name="SampleLog">
+    <level value="INFO"/>
+    <appender-ref ref="SampleInfoFileAppender" />
+    <appender-ref ref="SampleErrorFileAppender" />
+  </logger>
+  <appender name="SampleInfoFileAppender" type="log4net.Appender.RollingFileAppender">
+    <!--<appender name="ErrorAppender" type="log4net.Appender.FileAppender,log4net">-->
+    <file value="log/error.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="100" />
+    <maximumFileSize value="10240KB" />
+    <staticLogFileName value="true" />
+    <Encoding value="UTF-8" />
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <param name="LevelMin" value="WARN" />
+      <param name="LevelMax" value="FATAL" />
+    </filter>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %-5level %logger - %message%newline" />
+      <param name="Header" value="----------------------header--------------------------&#xD;&#xA;" />
+      <param name="Footer" value="----------------------footer--------------------------&#xD;&#xA;" />
+    </layout>
+  </appender>
+  <appender name="SampleErrorFileAppender" type="log4net.Appender.RollingFileAppender">
+    <!--<appender name="ErrorAppender" type="log4net.Appender.FileAppender,log4net">-->
+    <file value="log/error.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="100" />
+    <maximumFileSize value="10240KB" />
+    <staticLogFileName value="true" />
+    <Encoding value="UTF-8" />
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <param name="LevelMin" value="WARN" />
+      <param name="LevelMax" value="FATAL" />
+    </filter>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %-5level %logger - %message%newline" />
+      <param name="Header" value="----------------------header--------------------------&#xD;&#xA;" />
+      <param name="Footer" value="----------------------footer--------------------------&#xD;&#xA;" />
+    </layout>
+  </appender>
+</log4net>
+<!--
+配置与使用：
+1.*.config 里添加如下节点
+<section name="log4net" type="System.Configuration.IgnoreSectionHandler"/>
+2.Global.asax里Application_Start方法中添加下面配置
+var path = Server.MapPath("~/log4net.xml");
+log4net.Config.XmlConfigurator.Configure(new System.IO.FileInfo(path));
+3.使用，可以更改配置文件log4net.config自己配置
+方式一：log4net.LogManager.GetLogger(GetType());
+方式二：log4net.LogManager.GetLogger("logger-name");
+方式三：LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+-->

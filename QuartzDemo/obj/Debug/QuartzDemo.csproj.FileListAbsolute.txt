@@ -1,0 +1,17 @@
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\log4net.xml
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\quartz_jobs.xml
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\QuartzDemo.exe.config
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\QuartzDemo.exe
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\QuartzDemo.pdb
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.Core.dll
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.dll
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\log4net.dll
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Quartz.dll
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.pdb
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.xml
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.Core.pdb
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Common.Logging.Core.xml
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Quartz.pdb
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\bin\Debug\Quartz.xml
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\obj\Debug\QuartzDemo.exe
+E:\Git\mvcprocpage\mvcprocpage\QuartzDemo\obj\Debug\QuartzDemo.pdb

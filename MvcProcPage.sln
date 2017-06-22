@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProcPage", "MvcProcPage\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProcPage.Tests", "MvcProcPage.Tests\MvcProcPage.Tests.csproj", "{C8CB967D-AEC8-4EB3-939D-A769B9B25060}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzDemo", "QuartzDemo\QuartzDemo.csproj", "{651F6AD0-212A-4E9D-AC14-43411026ABA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C8CB967D-AEC8-4EB3-939D-A769B9B25060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8CB967D-AEC8-4EB3-939D-A769B9B25060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8CB967D-AEC8-4EB3-939D-A769B9B25060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651F6AD0-212A-4E9D-AC14-43411026ABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651F6AD0-212A-4E9D-AC14-43411026ABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651F6AD0-212A-4E9D-AC14-43411026ABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651F6AD0-212A-4E9D-AC14-43411026ABA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains job definitions in schema version 2.0 format -->
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+  <schedule>
+    <!--SampleJob测试 任务配置-->
+    <job>
+      <name>SampleJob</name>
+      <group>Sample</group>
+      <description>SampleJob测试</description>
+      <job-type>QuartzDemo.SampleJob,QuartzDemo</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <!--每隔3秒执行一次-->
+    <trigger>
+      <cron>
+        <name>SampleJobTrigger</name>
+        <group>Sample</group>
+        <job-name>SampleJob</job-name>
+        <job-group>Sample</job-group>
+        <start-time>2017-06-15T00:00:00+08:00</start-time>
+        <cron-expression>0/3 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+  </schedule>
+</job-scheduling-data>
